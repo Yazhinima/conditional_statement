@@ -1,0 +1,91 @@
+# problem 1: Given two numbers, print their sum. However, if the two numbers are the same, return double their sum.
+num1 = 20
+num2 = 20
+
+if num1 != num2:
+    print("the sum of the two different number is : ", num1+num2) 
+else:
+    print("the doubled value of the two num is : ", 2 * (num1+num2))
+num1 = 20
+num2 = 20
+​
+if num1 != num2:
+    print("the sum of the two different number is : ", num1+num2) 
+else:
+    print("the doubled value of the two num is : ", 2 * (num1+num2))
+
+the doubled value of the two num is :  80
+------------------------------------------------------------------------------------------------------
+
+# 2 Given a Cost price and Selling price of a product,write program to calculate profit or loss
+cost_price = 1000
+selling_price = 4000
+
+profit = selling_price - cost_price
+loss = cost_price - selling_price
+
+if selling_price > cost_price:
+    print("Profit for the product is : ", (profit/cost_price) * 100, "%")
+elif cost_price > selling_price:
+    print("Loss for the product is : ", (loss/cost_price) * 100, "%")
+else:
+    print("No gain or loss, the product sold at the cost_price ")
+
+
+Profit for the product is :  300.0 %
+-----------------------------------------------------------------------------------------------------------
+# 3 Write a program to input basic salary of an employee and calculate gross salary according to given conditions. 
+Basic Salary <= 10000 : HRA = 20%, DA = 80% 
+Basic Salary is between 10001 to 20000 : HRA = 25%, DA = 90% Basic Salary >= 20001 : HRA = 30%, DA = 95%
+
+basic_salary = int(input("Enter your basic salary : "))
+
+salary1_10k = (basic_salary + basic_salary * (20/100) + basic_salary * (80/100))
+salary2_20k = (basic_salary + basic_salary * (25/100) + basic_salary * (90/100))
+salary3_30k = (basic_salary + basic_salary * (30/100) + basic_salary * (95/100))
+
+if basic_salary <= 10000:
+    print("The gross salary is : ", salary1_10k)
+elif basic_salary >= 10001 and basic_salary <= 20000:
+    print("The gross salary is : ", salary2_20k)
+elif basic_salary >= 20001:
+    print("The gross salary is : ", salary3_30k)
+else:
+    print("Please enter a valid amount.")
+
+Enter your basic salary : 25000
+The gross salary is :  56250.0
+---------------------------------------------------------------------------------------------------------------
+# 4 Write a program to check if given year is leap year or not. 
+Leap year : A year is said to be leap year, if the year is exactly divisible by 4 but and not divisible by 100
+
+year = int(input("enter the year to find is it leap year or not : "))
+
+if year % 4 == 0 and year % 100 != 0:
+    print("The year you entered is a leap year.")
+else:
+    print("This is not a leap year.")
+
+enter the year to find is it leap year or not : 2020
+The year you entered is a leap year.
+---------------------------------------------------------------------------------------------------------------------
+# 5 Write a program to check whether triangle is equilateral, scalene or isosceles 
+A triangle is said Equilateral Triangle, if all its sides are equal. If a, b, c are three sides of triangle. 
+Then, the triangle is equilateral only if a == b == c.
+A triangle is said Isosceles Triangle, if its two sides are equal. If a, b, c are three sides of triangle. Then, the     
+triangle is isosceles if either a == b or a == c or b == c.
+A triangle is said Scalene Triangle, if none of its sides are equal.
+
+a_side = 10
+b_side = 20
+c_side = 30
+
+if a_side == b_side == c_side:
+    print("""This is a "Equilateral Triangle". """)
+elif a_side == b_side or b_side == c_side or a_side == c_side:
+    print("""This is a "Isoceles Triangle". """)
+else:
+    print("""This is a "scalene Triangle". """)
+    
+This is a "scalene Triangle". 
+------------------------------------------------------------------------------------------------------------------------
